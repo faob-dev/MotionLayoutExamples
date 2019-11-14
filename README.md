@@ -1,5 +1,8 @@
 # Android MotionLayout Examples
 
+#### Note
+Examples built with 1080 x 1920 resolution
+
 #### Card Detail
 ![alt tag](https://raw.githubusercontent.com/faob-dev/MotionLayoutExamples/master/screenshots/card_detail.gif)
 
