@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="300"
+        motion:motionInterpolator="easeInOut">
+
+        <KeyFrameSet>
+            <KeyPosition
+                motion:framePosition="50"
+                motion:keyPositionType="pathRelative"
+                motion:motionTarget="@id/rv_title"
+                motion:percentY="-0.2" />
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="50"
+                motion:motionTarget="@id/rv_detail" />
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/rv_title"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/rv_bg"
+            motion:layout_constraintEnd_toEndOf="@+id/rv_bg"
+            motion:layout_constraintStart_toStartOf="@+id/rv_bg"
+            motion:layout_constraintTop_toTopOf="@+id/rv_bg" />
+        <Constraint
+            android:id="@id/rv_detail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.0"
+            android:translationY="120dp"
+            motion:layout_constraintBottom_toTopOf="@+id/rv_content"
+            motion:layout_constraintEnd_toEndOf="@+id/rv_bg"
+            motion:layout_constraintStart_toStartOf="@+id/rv_bg"
+            motion:layout_constraintTop_toTopOf="@+id/rv_bg" />
+        <Constraint
+            android:id="@id/rv_content"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/rv_bg" />
+        <Constraint
+            android:id="@id/rv_bg"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/rv_title"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:rotation="0"
+            motion:layout_constraintBottom_toBottomOf="@+id/rv_bg"
+            motion:layout_constraintEnd_toEndOf="@+id/rv_bg"
+            motion:layout_constraintHorizontal_bias="0.1"
+            motion:layout_constraintStart_toStartOf="@+id/rv_bg"
+            motion:layout_constraintTop_toTopOf="@+id/rv_bg"
+            motion:layout_constraintVertical_bias="0.1" />
+        <Constraint
+            android:id="@id/rv_detail"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="150dp"
+            android:layout_marginEnd="16dp"
+            android:alpha="1.0"
+            android:translationY="0dp"
+            motion:layout_constraintBottom_toTopOf="@+id/rv_content"
+            motion:layout_constraintEnd_toEndOf="@+id/rv_bg"
+            motion:layout_constraintStart_toStartOf="@+id/rv_bg"
+            motion:layout_constraintTop_toTopOf="@+id/rv_bg" />
+        <Constraint
+            android:id="@id/rv_content"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/rv_bg" />
+        <Constraint
+            android:id="@id/rv_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+
+    </ConstraintSet>
+</MotionScene>
